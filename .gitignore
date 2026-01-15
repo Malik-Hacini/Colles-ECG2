@@ -1,0 +1,4 @@
+**/rapports/
+
+*.docx#
+.~lock.*
