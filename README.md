@@ -1,7 +1,7 @@
 # Colles ECG2 - Mathématiques Approfondies
 
-Exercices de mathématiques pour interrogations orales (appelées *colles*) de deuxième année de classe prépa ECG, filière Mathématiques Approfondies. Ces exercices ont été conçus et donnés aux élèves de la classe ECG2B du Lycée Champollion durant l'année scolaire 2025-26. Ils peuvent cependant être utiles à tout étudiant de mathématiques de niveau deuxième/3ème année dans le supérieur. La difficulté des exercices est indiquée par le nombre d'étoile(s) : applicatif (★), classique (★★) et exploratoire (★★★).
-Cette indication n’a rien d’absolu : ne vous découragez pas pour quelques petites étoiles !
+Exercices de mathématiques pour interrogations orales (appelées *colles*) de deuxième année de classe prépa ECG, filière Mathématiques Approfondies. Ces exercices ont été conçus et donnés aux élèves de la classe ECG2B du Lycée Champollion durant l'année scolaire 2025-26. Ils peuvent cependant être utiles à tout étudiant de mathématiques de niveau 2ème/3ème année dans le supérieur. La difficulté des exercices est indiquée par le nombre d'étoile(s) : applicatif (★), classique (★★) et exploratoire (★★★).
+Cette indication est calquée sur les attendus du programme d'ECG et n’a rien d’absolu: ne vous découragez pas pour quelques petites étoiles !
 
 ### Thèmes abordés
 
