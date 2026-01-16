@@ -33,7 +33,7 @@ Les feuilles d'exercices sont rédigées en [Typst](https://typst.app/), un lang
 
 ## Organisation du dépôt
 
-Le programme de colles s'étale sur deux semaines avec une intersection non nulle entre les thèmes des deux semaines, ce qui se reflète dans les titres des dossiers. **Si deux semaines ont exactement le même titre, consulter la plus récente pour la version la plus complète.**
+Les programmes de colles s'étalent sur deux semaines avec une intersection non nulle entre les thèmes des deux semaines. D'une semaine à l'autre, certains exercices peuvent alors se répéter.
 
 ## Licence
 
