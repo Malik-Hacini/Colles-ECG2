@@ -29,7 +29,7 @@ Chaque dossier correspond à une semaine de colles et contient :
 
 ## Fichiers sources
 
-Les feuilles d'exercices sont rédigées en [Typst](https://typst.app/), un langage de composition moderne et performant, à l'aide d'un template personnalisé. Pour compiler les fichiers `.typ`, le template est nécessaire : [lien vers le template](https://github.com/placeholder/mh_colle).
+Les feuilles d'exercices sont rédigées en [Typst](https://typst.app/), un langage de composition moderne et performant, à l'aide d'un template personnalisé. Pour compiler les fichiers `.typ`, le template est nécessaire : [bientôt disponible](https://github.com/placeholder/mh_colle).
 
 ## Organisation du dépôt
 
