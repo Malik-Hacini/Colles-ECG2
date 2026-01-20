@@ -51,7 +51,7 @@ Soient $E$ un $RR$-espace vectoriel muni d'un produit scalaire  $dotp(dot, dot  
   + D'après l'inégalité de Cauchy-Shwarz,  $abs( dotp(X  , Y)) <= norm(X)norm(Y) <=> abs( dotp(X  , Y)) /( norm(X)norm(Y) ) <= 1. $ La quantité en question appartient donc bien au domaine de définition de la fonction $arccos$.
   + Méditer la figure suivante, disponible #link("desmos.com/calculator/rhvqwxqwjs")[ici] en version interactive:
     #figure(
-    image("figures/produitscalaire.png", width: 80%),
+    image("figures/produitscalaire.png", width: 70%),
     caption: [Produit scalaire et projection orthogonale],
     ) <fig-produit> 
   + 
@@ -59,6 +59,8 @@ Soient $E$ un $RR$-espace vectoriel muni d'un produit scalaire  $dotp(dot, dot  
    + $X perp Y <=> dotp(X  , Y) = 0 <=> theta = pi/2 <=> norm(X+Y)^2 = norm(X)^2 + norm(Y)^2.$     
 
 ]
+
+/* #pagebreak() */
 
 #exercice(title: "Perturbation d'une famille orthonormée", n_stars:2)[
 Soient $E$ un $RR$-espace vectoriel muni d'un produit scalaire  $dotp(dot, dot  )$, $(e_1, dots, e_n)$ une famille orthonormée de $E$ et $x_1, dots, x_n in E$ des vecteurs pour lesquels $norm(x_1)^2 + dots + norm(x_n)^2 < 1$. \ Montrer que la famille $(e_1 + x_1, dots, e_n + x_n)$ est libre. 
@@ -85,6 +87,8 @@ Par conséquent, pour tout $i in {1, dots, n}$, $lambda_i = 0$.
 
 La famille $(e_1 + x_1, dots, e_n + x_n)$ est donc libre.
 ]
+
+  /* #pagebreak() */
 
 #exercice(title: "Un choix judicieux", n_stars: 2)[
   Considérons le $RR$-espace vectoriel $RR_n [X]$ et l'application $Phi$ suivante :
@@ -142,35 +146,8 @@ La famille $(e_1 + x_1, dots, e_n + x_n)$ est donc libre.
 
   *Remarque* : Les $L_k$ sont les polynômes d'interpolation de Lagrange associés aux points ${0,1,dots,n}$. La méthode précédente se généralise aisément à tout produit scalaire de la forme $sum_(i=0)^(n) P(a_i)Q(a_i)$ en considérant les polynômes de Lagrange associés aux points deux à deux dinstincts ${a_0, a_1, ... a_n}$.
 ]
-#exercice(title: "Mauvais tireur", n_stars:1)[
-Théo fait du tir à l'arc sur une cible circulaire de rayon 1. On suppose que Théo est suffisamment maladroit pour que le point d'impact $M$ de coordonnées $(X, Y)$ soit uniformément distribué sur la cible. On note $D = \{ (x, y) in RR^2; x^2 + y^2 <= 1 \}$.
 
-+ Quelle est la densité du couple $(X, Y)$ ?
-+ Déterminer les lois marginales de $X$ et de $Y$.
-+ Les variables aléatoires $X$ et $Y$ sont-elles indépendantes ?
-]
-
-
-#correction[
-+ D'après l'énoncé, on a
-  $ p_((X, Y)) (x, y) = 1/pi bb(1)_D (x, y) $
-  la constante $1/pi$ permettant de normaliser cette densité (son intégrale vaut 1).
-
-+ On applique la formule du cours :
-  $ p_X (x) = integral_RR p_((X, Y)) (x, y) dif y = 2/pi sqrt(1 - x^2) bb(1)_([-1, 1]) (x). $
-  Par symétrie du rôle joué par $X$ et $Y$, on a aussi
-  $ p_Y (y) = integral_RR p_((X, Y)) (x, y) dif x = 2/pi sqrt(1 - y^2) bb(1)_([-1, 1]) (y). $
-
-+ Soit $I = J = [3/4, 1]$. Il est clair que $P(X in I) > 0$ et que $P(Y in J) > 0$. D'autre part, puisque $(3/4)^2 + (3/4)^2 > 1$, on a aussi
-  $ P(X in I, Y in J) = 0. $
-  Ainsi,
-  $ P(X in I, Y in J) != P(X in I) P(Y in J) $
-  et donc les variables aléatoires $X$ et $Y$ ne sont pas indépendantes.
-]
-
-
-#exercice(title: "Mauvaise file", n_stars : 2)[
-
+#exercice(title:"Mauvaise file", n_stars : 2)[
 Trois personnes entrent simultanément dans une poste ne comportant que deux guichets. On note $X_i$ le temps passé par la i-ème personne au guichet. Les variables $X_i$ sont supposées mutuellement indépendantes et suivant toutes trois la loi uniforme sur $[0,1]$.
 
 + Déterminer la fonction de répartition de la variable correspondant au temps que doit attendre la troisième personne pour qu'un guichet se libère, notée $Y$.
@@ -226,6 +203,7 @@ Trois personnes entrent simultanément dans une poste ne comportant que deux gui
   $ V(Z) = E(Z^2) - E(Z)^2 = 5/6 - 25/36 = 5/36. $
 ]
 
+/* #pagebreak() */
 
 #exercice(title: "Minimum", n_stars:2)[
 Un sac contient $N$ boules numérotées de 1 à $N$. On effectue dans ce sac $n$ tirages uniformes d'une boule avec remise et on note $Z_n$ le plus petit numéro obtenu. Déterminer la loi de $Z_n$.
@@ -253,6 +231,8 @@ $ P(Z_n = k) = ((N - k + 1) / N)^n - ((N - k) / N)^n. $
 Notons que pour $k = N$, on obtient $P(Z_n = N) = 1/N^n$, ce qui était prévisible, puisque le seul moyen que la plus petite des boules porte le numéro $N$ est d'avoir tiré $n$ fois la boule $N$.
 ]
 
+/* #pagebreak() */
+
 #exercice(title: "Marche aléatoire", n_stars:2)[
 Soit $p in ]0, 1[$. On considère une suite $(X_n)_(n in NN^*)$ de variables aléatoires mutuellement indépendantes, de même loi, et telles que $P(X_1 = -1) = 1 - p$ et $P(X_1 = 1) = p$. On pose $S_n = sum_(k=1)^n X_k$.
 
@@ -268,7 +248,7 @@ Soit $p in ]0, 1[$. On considère une suite $(X_n)_(n in NN^*)$ de variables al�
   $ S_n = sum_(k=1)^n X_k = sum_(k=1)^n (2 Y_k - 1) = 2 sum_(k=1)^n Y_k - n $
   et $sum_(k=1)^n Y_k$ suit une loi binomiale $cal(B)(n, p)$ car les $Y_i$ sont indépendantes.
   De plus, $S_n$ prend ses valeurs dans $⟦ -n, n ⟧$, et donc pour tout $k in ⟦ -n, n ⟧$,
-  $ P(S_n = k) = P(2 sum_(k=1)^n Y_k = k + n) = P(sum_(k=1)^n Y_k = (k + n) / 2) = cases(
+  $ P(S_n = k) & = P(2 sum_(k=1)^n Y_k = k + n) \ & = P(sum_(k=1)^n Y_k  = (k + n) / 2) = cases(
     0 & "si" k + n "est impair",
     binom(n, (k + n) / 2) p^((k + n) / 2) (1 - p)^((2 - k - n) / 2) & "si" k + n "est pair"
   ) $
