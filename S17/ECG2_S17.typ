@@ -14,6 +14,7 @@
   additional_comments: [
 #linebreak()
 
+/*
 
 L'algèbre linéaire constitue un des trois grands blocs du programme d'ECG, avec l'analyse et les probabilités. Dans le cadre de la prépa, elle peut paraître abstraite et remplie de calculs à rallonge, notations, théorèmes et concepts abscons.
 
@@ -22,7 +23,7 @@ Cependant, cette théorie à émergée de l'idée simple d'étuder les systèmes
   A cet effet, je recommande ardamment l'excellente série de vidéos #link("https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab")[Essence of Linear Algebra] de la chaîne 3blue1brown (en anglais sous titré français).  Le chapitre 9 (Produit scalaire et Dualité) explique en particulier la notion fondamentale de l'introduction à l'algèbre bilinéaire au programme d'ECG.
 
   Je suis persuadé que quelques heures de méditation sur cette présentation de l'algèbre linéaire au cours de l'année vous sera infiniment plus utile qu'un enchaînement machinal d'exercices. En effet, leur réalité évidente sous-jacente vous resterait pour toujours invisible avec des yeux calculatoires.
-
+*/
 
   _Algebra is the offer made by the devil to the mathematician. The devil says: "I will give you this powerful machine, it will answer any question you like. All you need to do is give me your soul: give up geometry and you will have this marvelous machine._ -- Michael Atiyah
 ])
@@ -167,8 +168,7 @@ Théo fait du tir à l'arc sur une cible circulaire de rayon 1. On suppose que T
   et donc les variables aléatoires $X$ et $Y$ ne sont pas indépendantes.
 ]
 
-/*
-*
+
 #exercice(title: "Mauvaise file", n_stars : 2)[
 
 Trois personnes entrent simultanément dans une poste ne comportant que deux guichets. On note $X_i$ le temps passé par la i-ème personne au guichet. Les variables $X_i$ sont supposées mutuellement indépendantes et suivant toutes trois la loi uniforme sur $[0,1]$.
@@ -225,7 +225,7 @@ Trois personnes entrent simultanément dans une poste ne comportant que deux gui
   Et donc, par la formule de Huygens, la variance de $Z$ vaut
   $ V(Z) = E(Z^2) - E(Z)^2 = 5/6 - 25/36 = 5/36. $
 ]
-*/
+
 
 #exercice(title: "Minimum", n_stars:2)[
 Un sac contient $N$ boules numérotées de 1 à $N$. On effectue dans ce sac $n$ tirages uniformes d'une boule avec remise et on note $Z_n$ le plus petit numéro obtenu. Déterminer la loi de $Z_n$.
