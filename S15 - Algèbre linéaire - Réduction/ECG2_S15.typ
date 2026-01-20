@@ -163,43 +163,7 @@ Le but de l'exercice est de déterminer les endomorphismes $v$ de $RR^3$ vérifi
 Soit $n in NN^*$. Déterminer toutes les matrices A de $cal(M)_2 (RR)$ telles que $ A^n = mat( 1, 1 ; 0 , 1). $
 ]
 
-#correction[
-
-La matrice $A$ commute avec $A^n$, donc $A A^n = A^n A$.
-$ A A^n &= mat(a, b; c, d) mat(1, 1; 0, 1) = mat(a, a+b; c, c+d) \
-A^n A &= mat(1, 1; 0, 1) mat(a, b; c, d) = mat(a+c, b+d; c, d) $
-
-L'égalité implique le système suivant :
-$ cases(a = a + c, a + b = b + d, c = c, c + d = d) arrow.l.r.double cases(c = 0, a = d) $
-La matrice $A$ est donc triangulaire supérieure avec des coefficients diagonaux égaux. Elle s'écrit sous la forme $A = mat(a, b; 0, a)$.
-
-On peut décomposer $A$ comme somme d'une homothétie et d'une matrice nilpotente :
-$ A = a I_2 + B quad "avec" B = mat(0, b; 0, 0). $
-Remarquons que $B^2 = mat(0, 0; 0, 0)$, donc $B^k = 0$ pour tout $k >= 2$.
-Comme $a I_2$ et $B$ commutent, on peut appliquer la formule du binôme de Newton :
-$ A^n = (a I_2 + B)^n = sum_(k=0)^n binom(n, k) (a I_2)^(n-k) B^k = binom(n, 0) a^n I_2 + binom(n, 1) a^(n-1) B. $
-On obtient donc :
-$ A^n = a^n mat(1, 0; 0, 1) + n a^(n-1) mat(0, b; 0, 0) = mat(a^n, n a^(n-1) b; 0, a^n). $
-
-* Autre méthode* : Avec un raisonnement géométrique, on peut directement conjecturer cette forme des puissances de A, et confirmer cela par récurrence.
-
-Par identification avec la matrice donnée $mat(1, 1; 0, 1)$, on obtient le système :
-$ cases(a^n = 1, n a^(n-1) b = 1) $
-
-La parité de $n$ implique plus ou moins de solutions.
-
- *Si $n$ est impair :* \
-    L'équation $a^n = 1$ admet une unique solution réelle $a = 1$.
-    Le système devient $1 dot b dot n = 1$, d'où $b = 1/n$.
-    On obtient une unique solution :
-    $ A_1 = mat(1, 1/n; 0, 1). $
-
- *Si $n$ est pair :* \
-    L'équation $a^n = 1$ admet deux solutions réelles : $a = 1$ et $a = -1$. \
-  #sym.bullet Pour $a = 1$, on retrouve la matrice $A_1 = mat(1, 1/n; 0, 1)$. \
-  #sym.bullet  Pour $a = -1$, l'équation devient $n (-1)^(n-1) b = 1$. Comme $n$ est pair, $n-1$ est impair, donc $-n b = 1$, soit $b = -1/n$. Cela donne la matrice $A_2 = mat(-1, -1/n; 0, -1) = -A_1$.
-
-]
+#correction
 
 /* #pagebreak() */
 
