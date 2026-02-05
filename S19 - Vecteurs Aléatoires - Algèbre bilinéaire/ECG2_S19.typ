@@ -41,7 +41,7 @@ mouvant dont chacune des opérations analytiques est l’écriture._
 }
 
 #let Sp = $op("Sp")$
-#let dotp(..args) = math.angle.l + args.pos().join(math.comma) + math.angle.r
+#let dotp(..args) = math.chevron.l + args.pos().join(math.comma) + math.chevron.r
 
 #let ts(arg) = $attach(arg, tl: t)$
 
@@ -60,6 +60,8 @@ $ B^2 = ts(P) C underbrace(P ts(P), =I_n) C P = ts(P) C^2 P = ts(P) D P = A. $
 
 De plus, $ts(B) =  attach((ts(P) C P)  , tl: t) = ts(P) ts(C) P = ts(P) C P = B$, donc $B$ est symétrique.
 Enfin, puisque $B$ est semblable à $C$, $op("Spec")(B) = op("Spec")(C)$. Or les valeurs propres de $C$ sont les $sqrt(lambda_i) >= 0$, et donc toutes les valeurs propres de $B$ sont positives.
+
+* Remarque * : Le caractère symétrique de $A$ n'est pas strictement nécessaire ; il suffit d'une matrice diagonalisable aux v.p positives.
 ]
 
 #exercice(title: "Projecteurs orthogonaux qui commutent", n_stars: 2)[
@@ -80,11 +82,15 @@ Soit $n in NN$ tel que $n >= 3$. $RR^n$ est muni de son produit scalaire canoniq
   Et donc $ts((A B)) = A B <=> ts(B) ts(A) = A B <=> B A = A B$.
   On en déduit que $A$ et $B$ commutent, et donc que $p$ et $q$ commutent également.
 
-+ On a
+  * Remarque * : Nous n’avons pas vraiment utilisé le fait que $p$ et $q$ soient des projecteurs, mais seulement qu’ils soient symétriques. Plus généralement, la composée de deux endomorphismes symétriques est symétrique si et seulement si ces deux endomorphismes commutent.
++ On a #footnote[Puisque p et q commutent,
+on peut utiliser le binôme
+de Newton pour calculer
+$(p + q)^k$. Le calcul est laissé au lecteur.]
   $ (p + q - 2 id) compose (p + q - id) compose (p + q) &= ((p + q)^2 - 3(p + q) + 2 id) compose (p + q) \
   &= ((p + q)^3 - 3(p + q)^2 + 2(p + q)) \
-  &= (p^3 + 3p^2 compose q + 3p compose q^2 + q^3) - 3(p^2 + 2p compose q + q^2) + 2p + 2q \
-  &= p + q + 6p compose q - 3p - 6p compose q - 3q + 2p + 2q = 0. $
+  &=0. $
+
   Et donc $P = (X - 2)(X - 1)X$ est un polynôme annulateur de $p + q$.
   Puisque les valeurs propres de $p + q$ sont parmi les racines de $P$, on en déduit que les valeurs propres possibles de $p + q$ sont $0, 1$ et $2$.
 
@@ -95,10 +101,10 @@ Soit $n in NN$ tel que $n >= 3$. $RR^n$ est muni de son produit scalaire canoniq
   De plus, on a $A B = mat(0, 0, 0; 0, 1, 0; 0, 0, 0)$, et donc par le même raisonnement, $p compose q$ est encore un projecteur orthogonal.
   Enfin, on a $A + B = mat(1, 0, 0; 0, 2, 0; 0, 0, 0)$, qui possède $0, 1$ et $2$ comme valeurs propres, et donc $op("Spec")(p + q) = {0, 1, 2}$.
 ]
-#exercice(title: "Racines carrées, chapitre 2", n_stars: 2)[
-Soit $E$ un espace euclidien. Un endomorphisme symétrique $f in cal(L)(E)$ est dit défini positif si pour tout $x in E \\ {0}$, $angle.l f(x), x angle.r > 0$.
+#exercice(title: "Symétrique défini positif", n_stars: 2)[
+Soit $E$ un espace euclidien. Un endomorphisme symétrique $f in cal(L)(E)$ est dit défini positif si pour tout $x in E \\ {0}$, $chevron.l f(x), x chevron.r > 0$.
 
-+ Soit $f in cal(L)(E)$ tel qu'il existe $g in cal(L)(E)$, symétrique tel que $g^2 = f$. Montrer que $f$ est symétrique et que $forall x in E, angle.l f(x), x angle.r >= 0$.
++ Soit $f in cal(L)(E)$ tel qu'il existe $g in cal(L)(E)$, symétrique tel que $g^2 = f$. Montrer que $f$ est symétrique et que $forall x in E, chevron.l f(x), x chevron.r >= 0$.
 + Montrer qu'un endomorphisme symétrique est défini positif si et seulement si $"Spec"(f) subset RR_+^*$.
 + En déduire que si $f$ est symétrique défini positif, alors $f$ est inversible et $f^(-1)$ est encore symétrique défini positif.
 + Soit $f$ un endomorphisme symétrique défini positif de $E$. Montrer qu'il existe $g in cal(L)(E)$, symétrique, défini positif, tel que $g^2 = f$. _Indication : on pourra s'intéresser à la matrice de $f$ dans une base orthonormée de $E$ formée de vecteurs propres de $f$._
@@ -108,20 +114,20 @@ Soit $E$ un espace euclidien. Un endomorphisme symétrique $f in cal(L)(E)$ est 
 
 
 + Supposons donc qu'il existe $g$ symétrique tel que $f = g^2$. Alors, pour tous $x, y in E$, on a
-  $ angle.l f(x), y angle.r = angle.l g^2(x), y angle.r = angle.l g(x), g(y) angle.r = angle.l x, g^2(y) angle.r = angle.l x, f(y) angle.r. $
+  $ chevron.l f(x), y chevron.r = chevron.l g^2(x), y chevron.r = chevron.l g(x), g(y) chevron.r = chevron.r x, g^2(y) chevron.r = chevron.r x, f(y) chevron.r. $
   Et donc $f$ est symétrique.
   D'autre part, pour $x in E, x != 0$, on a
-  $ angle.l f(x), x angle.r = angle.l g^2(x), x angle.r = angle.l g(x), g(x) angle.r = ||g(x)||^2. $
-  Donc déjà, $angle.l f(x), x angle.r >= 0$, il suffit de voir que ce produit scalaire est non nul. Mais c'est le cas si et seulement si $g(x) = 0_E$. Mais dans ce cas, on aurait alors $angle.l g(x), x angle.r = angle.l 0_E, x angle.r = 0$, contredisant le fait que $g$ est défini positif.
+  $ chevron.l f(x), x chevron.r = chevron.l g^2(x), x chevron.r = chevron.l g(x), g(x) chevron.r = ||g(x)||^2. $
+  Donc déjà, $chevron.l f(x), x chevron.r >= 0$, il suffit de voir que ce produit scalaire est non nul. Mais c'est le cas si et seulement si $g(x) = 0_E$. Mais dans ce cas, on aurait alors $chevron.l g(x), x chevron.r = chevron.l 0_E, x chevron.r = 0$, contredisant le fait que $g$ est défini positif.
 
 + Supposons que toutes les valeurs propres de $f$ soient strictement positives, et soit $(e_1, ..., e_n)$ une base orthonormée de $E$ formée de vecteurs propres de $f$, et soit $lambda_i$ la valeur propre associée à $e_i$.
   Alors, tout vecteur non nul $x$ de $E$ s'écrit de manière unique $x = sum_(i=1)^n x_i e_i$, où les $x_i$ ne sont pas tous nuls. Et alors
-  $ angle.l f(x), x angle.r = angle.l sum_(i=1)^n x_i e_i, f(sum_(j=1)^n x_j e_j) angle.r = angle.l sum_(i=1)^n x_i e_i, sum_(j=1)^n x_j lambda_j e_j angle.r = sum_(i=1)^n sum_(j=1)^n x_i x_j angle.l e_i, e_j angle.r = sum_(i=1)^n x_i^2 lambda_i. $
-  Puisque les $x_i^2 lambda_i$ sont positifs, $angle.l x, f(x) angle.r >= 0$, et n'étant pas tous nuls, $angle.l x, f(x) angle.r > 0$, de sorte que $f$ est défini positif.
+  $ chevron.l f(x), x chevron.r = chevron.l sum_(i=1)^n x_i e_i, f(sum_(j=1)^n x_j e_j) chevron.r = chevron.l sum_(i=1)^n x_i e_i, sum_(j=1)^n x_j lambda_j e_j chevron.r = sum_(i=1)^n sum_(j=1)^n x_i x_j chevron.r e_i, e_j chevron.r = sum_(i=1)^n x_i^2 lambda_i. $
+  Puisque les $x_i^2 lambda_i$ sont positifs, $chevron.l x, f(x) chevron.r >= 0$, et n'étant pas tous nuls, $chevron.l x, f(x) chevron.r > 0$, de sorte que $f$ est défini positif.
 
   Inversement, si $f$ est défini positif, soit $lambda$ une valeur propre de $f$ et $x$ un vecteur propre associé. Alors
-  $ angle.l x, f(x) angle.r = angle.l x, lambda x angle.r = lambda ||x||^2. $
-  Mais par hypothèse, $angle.l x, f(x) angle.r > 0$, et $x$ étant non nul, $||x|| > 0$, de sorte que $lambda = angle.l x, f(x) angle.r / ||x||^2 > 0$.
+  $ chevron.l x, f(x) chevron.r = chevron.l x, lambda x chevron.r = lambda ||x||^2. $
+  Mais par hypothèse, $chevron.l x, f(x) chevron.r > 0$, et $x$ étant non nul, $||x|| > 0$, de sorte que $lambda = chevron.l x, f(x) chevron.r / ||x||^2 > 0$.
   Donc toutes les valeurs propres de $f$ sont strictement positives.
 
 + Si $f$ est défini positif, alors par la question précédente, ses valeurs propres sont toutes non nulles, et donc $f$ est inversible.

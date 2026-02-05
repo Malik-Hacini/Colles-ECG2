@@ -15,6 +15,9 @@ Cette indication est calquée sur les attendus du programme d'ECG et n’a rien 
 | S14 | Réduction et Variables à densité |
 | S15 | Algèbre linéaire - Réduction |
 | S16 | Produit scalaire, Espaces Euclidiens |
+| S17 | Algèbre bilinéaire - Vecteurs aléatoires |
+| S18 | Vecteurs aléatoires |
+| S19 | Endomorphismes symétriques - Vecteurs aléatoires |
 
 ## Un petit exemple
 
