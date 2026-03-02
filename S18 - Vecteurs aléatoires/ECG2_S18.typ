@@ -2,8 +2,8 @@
 #import "@preview/codly:1.3.0": *
 #show: codly-init
 #import "@preview/codly-languages:0.1.10": *
-#codly(languages: codly-languages, 
-  number-format: none, 
+#codly(languages: codly-languages,
+  number-format: none,
   zebra-fill: luma(240),
 )
 
@@ -47,7 +47,7 @@ Trois personnes entrent simultanément dans une poste ne comportant que deux gui
 #correction[
 + Pour tout $x in RR$, on a $[Y > x] = [X_1 > x] inter.big [X_2 > x]$.
   Et donc, par indépendance de $X_1$ et $X_2$, il vient
-  $ F_Y (x) & = P(Y <= x) \ & = 1 - P(Y > x) = 1 - P([X_1 > x] inter.big [X_2 > x]) 
+  $ F_Y (x) & = P(Y <= x) \ & = 1 - P(Y > x) = 1 - P([X_1 > x] inter.big [X_2 > x])
   \ & = 1 - P(X_1 > 1) P(X_2 > x) \ & = 1 - (1 - F_(X_1) (x))(1 - F_(X_2) (x)) = cases(
     0 & "si" x <= 0,
     1 - (1 - x)^2 & "si" 0 < x < 1,
@@ -126,7 +126,7 @@ Soit $p in ]0, 1[$. On considère une suite $(X_n)_(n in NN^*)$ de variables al�
 + Déterminer deux réels $a$ et $b$ tels que $Y_n = a X_n + b$ suive une loi de Bernoulli de paramètre $p$.
 + En utilisant la question précédente, déterminer la loi de $S_n$ et calculer son espérance.
 *Application* :
- #set enum(start: 3) 
+ #set enum(start: 3)
   + Un ivrogne sort du bar, et chaque seconde avance d'un mètre vers la droite avec probabilité $p$, ou d'un mètre vers la gauche avec probabilité $1 - p$. \
     En moyenne, où se trouve-t-il après 10 secondes ?
   + Proposer un programme `Python` simulant la marche d'un tel ivrogne pendant 1000 secondes, avec $p = 1/2$.
@@ -157,7 +157,7 @@ import random
 
 def simulation_ivrogne(n_secondes, p):
     position = 0
-    
+
     for _ in range(n_secondes):
         tirage = random.random()
         if tirage < p:
@@ -166,8 +166,8 @@ def simulation_ivrogne(n_secondes, p):
             position = position - 1
     return position
 
-duree = 1000    
-p = 0.5     
+duree = 1000
+p = 0.5
 
 resultat = simulation_ivrogne(duree, proba_p)
 print(f"Après {duree} secondes, l'ivrogne est à la position : {resultat}")
@@ -214,7 +214,7 @@ $ sum_(j=r)^s binom(j, r) = binom(s+1, r+1) $
   $P(S_1 = k) = P(X_1 = k) = p q^(k-1)$.
   La formule donne $binom(k-1, 0) p^1 q^(k-1) = 1 dot p q^(k-1)$.
 
-  *Hérédité :* 
+  *Hérédité :*
 
   Supposons $cal(P)(n)$ vraie.
   On a $S_(n+1) = S_n + X_(n+1)$. Par la formule des probabilités totales (convolution discrète):
@@ -231,7 +231,7 @@ $ sum_(j=r)^s binom(j, r) = binom(s+1, r+1) $
   Ce qui achève la récurrence.
 
 
-+ 
++
   + Conditionnellement à $[N=n]$, $S$ est la somme déterministe de $n$ variables $X_i$ indépendantes. Par linéarité de l'espérance :
     $ E(S | [N=n]) = E(S_n) = sum_(i=1)^n E(X_i) = n E(X_1) $
     Comme $X_1 arrow.r.hook cal(G)(p)$, $E(X_1) = 1/p$.
