@@ -168,9 +168,8 @@ $
 On considère alors une suite $(X_n)_(n in NN^*)$ de variables aléatoires i.i.d. de densité $f_a$, où $a$ est inconnu.
 Pour $n in NN^*$, on définit une fonction $L_n$ (appelée fonction de vraisemblance) par
 $
-L_n : ([1, +oo[)^n times RR_+^* -> RR_+, quad (x_1, ..., x_n, a) mapsto product_(i=1)^n f_a (x_i).
+L_n : quad ([1, +oo[)^n times RR_+^* -> RR_+, #linebreak() quad quad quad (x_1, ..., x_n, a) mapsto product_(i=1)^n f_a (x_i).
 $
-
 + Pour $(x_1, ..., x_n)$ fixés, montrer que $a mapsto L_n (x_1, ..., x_n, a)$ possède un maximum atteint en un unique réel $a$ que l'on exprimera en fonction de $x_1, ..., x_n$.
   On pourra à cet effet étudier les variations de la fonction $a mapsto ln(L_n (x_1, ..., x_n, a))$.
 
