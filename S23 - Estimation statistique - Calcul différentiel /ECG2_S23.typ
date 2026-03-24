@@ -20,21 +20,10 @@
   show_info_text: true,
   additional_comments: [
 #linebreak()
-/* L'algèbre linéaire constitue un des trois grands blocs du programme d'ECG, avec l'analyse et les probabilités. Dans le cadre de la prépa, elle peut paraître abstraite et remplie de calculs à rallonge, notations, théorèmes et concepts abscons.
-
-Cependant, cette théorie à émergée de l'idée simple d'étuder les systèmes linéaires sous l'angle de la *géométrie*, ce qui a débouché sur l'axiomatisation des espaces vectoriels comme concept général fondateur. Il ne faut donc jamais perdre de vue notre amie géométrie, car son omniprésence sera le phare de notre voyage dans une nuit abstraite.
-
-  A cet effet, je recommande ardamment l'excellente série de vidéos #link("https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab")[Essence of Linear Algebra] de la chaîne 3blue1brown (en anglais sous titré français).  Le chapitre 9 (Produit scalaire et Dualité) explique en particulier la notion fondamentale de l'introduction à l'algèbre bilinéaire au programme d'ECG.
-
-  Je suis persuadé que quelques heures de méditation sur cette présentation de l'algèbre linéaire au cours de l'année vous sera infiniment plus utile qu'un enchaînement machinal d'exercices. En effet, leur réalité évidente sous-jacente vous resterait pour toujours invisible avec des yeux calculatoires.
-*/
-
- _Il faut donc que l’élève se mette en état, d’une part, de pouvoir écrire en
-analyse tous les mouvements qu’il peut concevoir dans l’espace, et, de
-l’autre, de se représenter perpétuellement dans l’espace le spectacle
-mouvant dont chacune des opérations analytiques est l’écriture._ 
-
-  Gaspard Monge - _Cours de Géométrie descriptive_ (1746 - 1818)])
+#linebreak()
+ _Modern statisticians are familiar with the notion that any finite body of data contains only a limited amount of information on any point under examination; that this limit is set by the nature of the data themselves, and cannot be increased by any amount of ingenuity expended in their statistical examination: that the statistician's task, in fact, is limited to the extraction of the whole of the available information on any particular issue._
+  
+  -- R.A Fisher ])
 #show list: it => context {
   let height = measure(it).height / 2
   block(height: height, columns(2, it))

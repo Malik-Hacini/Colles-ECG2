@@ -20,21 +20,10 @@
   show_info_text: true,
   additional_comments: [
 #linebreak()
-/* L'algèbre linéaire constitue un des trois grands blocs du programme d'ECG, avec l'analyse et les probabilités. Dans le cadre de la prépa, elle peut paraître abstraite et remplie de calculs à rallonge, notations, théorèmes et concepts abscons.
-
-Cependant, cette théorie à émergée de l'idée simple d'étuder les systèmes linéaires sous l'angle de la *géométrie*, ce qui a débouché sur l'axiomatisation des espaces vectoriels comme concept général fondateur. Il ne faut donc jamais perdre de vue notre amie géométrie, car son omniprésence sera le phare de notre voyage dans une nuit abstraite.
-
-  A cet effet, je recommande ardamment l'excellente série de vidéos #link("https://www.youtube.com/watch?v=fNk_zzaMoSs&list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab")[Essence of Linear Algebra] de la chaîne 3blue1brown (en anglais sous titré français).  Le chapitre 9 (Produit scalaire et Dualité) explique en particulier la notion fondamentale de l'introduction à l'algèbre bilinéaire au programme d'ECG.
-
-  Je suis persuadé que quelques heures de méditation sur cette présentation de l'algèbre linéaire au cours de l'année vous sera infiniment plus utile qu'un enchaînement machinal d'exercices. En effet, leur réalité évidente sous-jacente vous resterait pour toujours invisible avec des yeux calculatoires.
-*/
-
- _Il faut donc que l’élève se mette en état, d’une part, de pouvoir écrire en
-analyse tous les mouvements qu’il peut concevoir dans l’espace, et, de
-l’autre, de se représenter perpétuellement dans l’espace le spectacle
-mouvant dont chacune des opérations analytiques est l’écriture._ 
-
-  Gaspard Monge - _Cours de Géométrie descriptive_ (1746 - 1818)])
+#linebreak()
+ _Modern statisticians are familiar with the notion that any finite body of data contains only a limited amount of information on any point under examination; that this limit is set by the nature of the data themselves, and cannot be increased by any amount of ingenuity expended in their statistical examination: that the statistician's task, in fact, is limited to the extraction of the whole of the available information on any particular issue._
+  
+  -- R.A Fisher ])
 #show list: it => context {
   let height = measure(it).height / 2
   block(height: height, columns(2, it))
@@ -50,13 +39,13 @@ On cherche à évaluer le nombre $N$ de lions d'Asie, espèce en voie de dispari
 Pour cela, on capture d'abord en une seule fois $m$ lions ($m in NN^*$), que l'on tatoue avant de les relâcher dans la nature.
 On admet que, pendant toute la durée de l'étude, il n'y a ni naissance ni décès, puis l'on utilise l'une des deux méthodes suivantes.
 
-+ Première méthode.
++ *Première méthode*. #linebreak()
   On capture successivement au hasard (donc avec équiprobabilité), et avec remise en liberté après observation du sujet, $n$ lions.
   On note $Y_n$ le nombre de lions tatoués parmi eux.
   + Déterminer la loi de $Y_n$. En déduire que $Y_n/(m n)$ est un estimateur sans biais et convergent de $1/N$.
   + Pourquoi ne peut-on pas prendre $m n / Y_n$ comme estimateur de $N$ ?
   + On pose $B_n = m(n + 1)/(Y_n + 1)$. Calculer l'espérance de $B_n$, et montrer que $B_n$ est un estimateur asymptotiquement sans biais de $N$.
-+ Deuxième méthode.
++ *Deuxième méthode*. #linebreak()
   On se donne $n in NN^*$.
   On capture également, un par un, et avec remise en liberté après observation du sujet, des lions de Gir jusqu'à en obtenir $n$ tatoués.
   On note $X_n$ la variable aléatoire égale au nombre de lions qu'il a été nécessaire de capturer pour en obtenir $n$ tatoués.
