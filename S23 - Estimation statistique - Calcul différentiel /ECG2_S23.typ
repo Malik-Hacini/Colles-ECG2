@@ -2,8 +2,8 @@
 #import "@preview/codly:1.3.0": *
 #show: codly-init
 #import "@preview/codly-languages:0.1.10": *
-#codly(languages: codly-languages, 
-  number-format: none, 
+#codly(languages: codly-languages,
+  number-format: none,
   zebra-fill: luma(240),
 )
 
@@ -22,7 +22,7 @@
 #linebreak()
 #linebreak()
  _Modern statisticians are familiar with the notion that any finite body of data contains only a limited amount of information on any point under examination; that this limit is set by the nature of the data themselves, and cannot be increased by any amount of ingenuity expended in their statistical examination: that the statistician's task, in fact, is limited to the extraction of the whole of the available information on any particular issue._
-  
+
   -- R.A Fisher ])
 #show list: it => context {
   let height = measure(it).height / 2
